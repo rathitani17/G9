@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPulse - Premium Car & Bike Dealers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="javascript:void(0)" class="logo" onclick="showSection('home')">
+                    <div class="logo-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="logo-text">
+                        <div class="logo-name">
+                            <span class="logo-auto">AUTO</span><span class="logo-pulse">PULSE</span>
+                        </div>
+                        <div class="logo-subtitle">PREMIUM DEALERS</div>
+                    </div>
+                </a>
+
+                <nav class="nav" id="navMenu">
+                    <a href="javascript:void(0)" class="nav-link active" data-section="home" onclick="showSection('home')">Home</a>
+                    <a href="javascript:void(0)" class="nav-link" data-section="inventory" onclick="showSection('inventory')">Inventory</a>
+                    <a href="javascript:void(0)" class="nav-link" data-section="services" onclick="showSection('services')">Services</a>
+                    <a href="javascript:void(0)" class="nav-link" data-section="sell" onclick="showSection('sell')">Sell</a>
+                    <a href="javascript:void(0)" class="nav-link" data-section="compare" onclick="showSection('compare')">Compare</a>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars" id="mobileMenuIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <div class="hero">
+            <div class="hero-bg">
+                <img src="https://images.unsplash.com/photo-1656861593680-0363ba5c27bc?q=80&w=1920" alt="Premium Car">
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-star"></i>
+                        <span>Trusted by 10,000+ Customers</span>
+                    </div>
+                    <h1 class="hero-title">Find. Buy. Service. Repeat.</h1>
+                    <p class="hero-subtitle">Experience premium automotive excellence with our curated collection of high-performance vehicles and world-class servicing.</p>
+                    
+                    <div class="search-box">
+                        <div class="search-filters">
+                            <select class="search-select">
+                                <option>Brand</option>
+                                <option>BMW</option>
+                                <option>Porsche</option>
+                                <option>Tesla</option>
+                            </select>
+                            <select class="search-select">
+                                <option>Type</option>
+                                <option>Car</option>
+                                <option>Bike</option>
+                                <option>Electric</option>
+                            </select>
+                            <select class="search-select">
+                                <option>Price Range</option>
+                                <option>Under $30k</option>
+                                <option>$30k - $70k</option>
+                                <option>$70k+</option>
+                            </select>
+                            <select class="search-select">
+                                <option>Year</option>
+                                <option>2024</option>
+                                <option>2023</option>
+                            </select>
+                        </div>
+                        <button class="search-btn" onclick="showSection('inventory')">
+                            <i class="fas fa-search"></i>
+                            Search Vehicles
+                        </button>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <button class="btn btn-outline-blue" onclick="showSection('inventory')">
+                            <i class="fas fa-car"></i>
+                            Explore Cars
+                        </button>
+                        <button class="btn btn-outline-orange" onclick="showSection('inventory')">
+                            <i class="fas fa-motorcycle"></i>
+                            Explore Bikes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Complete Vehicle Servicing</h2>
+                    <p>Professional care for your vehicle with state-of-the-art facilities</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon blue">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <h3>Routine Maintenance</h3>
+                        <p>Complete check-up, oil change, and diagnostics</p>
+                        <a href="javascript:void(0)" class="service-link" onclick="showSection('services')">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon orange">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Accidental Repair</h3>
+                        <p>Expert collision repair and restoration</p>
+                        <a href="javascript:void(0)" class="service-link" onclick="showSection('services')">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon blue">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Denting & Painting</h3>
+                        <p>Professional dent removal and painting</p>
+                        <a href="javascript:void(0)" class="service-link" onclick="showSection('services')">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon orange">
+                            <i class="fas fa-droplet"></i>
+                        </div>
+                        <h3>Washing & Detailing</h3>
+                        <p>Premium wash and mirror finish</p>
+                        <a href="javascript:void(0)" class="service-link" onclick="showSection('services')">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon blue">
+                            <i class="fas fa-sparkles"></i>
+                        </div>
+                        <h3>Polishing & Restoring</h3>
+                        <p>Paint correction and ceramic coating</p>
+                        <a href="javascript:void(0)" class="service-link" onclick="showSection('services')">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon orange">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Full Interior Cleaning</h3>
+                        <p>Deep detailing - Dealer Special</p>
+                        <a href="javascript:void(0)" class="service-link" onclick="showSection('services')">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="section-cta">
+                    <button class="btn btn-gradient" onclick="showSection('services')">
+                        View All Services <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="categories-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Browse by Category</h2>
+                    <p>Discover your perfect ride from our premium collection</p>
+                </div>
+
+                <div class="categories-grid">
+                    <div class="category-card" onclick="showSection('inventory')">
+                        <img src="https://images.unsplash.com/photo-1656861593680-0363ba5c27bc?q=80&w=1080" alt="Premium Cars">
+                        <div class="category-overlay"></div>
+                        <div class="category-content">
+                            <div class="category-badge">150+ Vehicles</div>
+                            <h3>Premium Cars</h3>
+                            <p>Luxury and sports cars collection</p>
+                            <button class="btn btn-gradient">
+                                Explore Now <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="category-card" onclick="showSection('inventory')">
+                        <img src="https://images.unsplash.com/photo-1586796953910-4df81db83021?q=80&w=1080" alt="Performance Bikes">
+                        <div class="category-overlay"></div>
+                        <div class="category-content">
+                            <div class="category-badge">80+ Bikes</div>
+                            <h3>Performance Bikes</h3>
+                            <p>High-performance motorcycles</p>
+                            <button class="btn btn-gradient">
+                                Explore Now <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="category-card" onclick="showSection('inventory')">
+                        <img src="https://images.unsplash.com/photo-1760539120788-8529cccfea75?q=80&w=1080" alt="Electric Vehicles">
+                        <div class="category-overlay"></div>
+                        <div class="category-content">
+                            <div class="category-badge">45+ EVs</div>
+                            <h3>Electric Vehicles</h3>
+                            <p>Sustainable and powerful EVs</p>
+                            <button class="btn btn-gradient">
+                                Explore Now <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-banner">
+            <div class="cta-bg"></div>
+            <div class="container">
+                <h2>Ready to Find Your Perfect Ride?</h2>
+                <p>Browse our extensive inventory or book a service today</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-white" onclick="showSection('inventory')">Browse Inventory</button>
+                    <button class="btn btn-outline-white" onclick="showSection('services')">Book Service</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inventory Section -->
+    <section id="inventory" class="section">
+        <div class="container">
+            <div class="page-header">
+                <h2>Vehicle Inventory</h2>
+                <p class="page-subtitle">Showing 6 premium vehicles</p>
+            </div>
+
+            <div class="type-filters">
+                <button class="filter-btn active" onclick="filterVehicles('all')">All Vehicles</button>
+                <button class="filter-btn" onclick="filterVehicles('car')"><i class="fas fa-car"></i> Cars</button>
+                <button class="filter-btn" onclick="filterVehicles('bike')"><i class="fas fa-motorcycle"></i> Bikes</button>
+                <button class="filter-btn" onclick="filterVehicles('ev')"><i class="fas fa-bolt"></i> Electric</button>
+            </div>
+
+            <div class="inventory-layout">
+                <aside class="filters-sidebar">
+                    <div class="filters-card">
+                        <h3>Filters</h3>
+                        
+                        <div class="filter-group">
+                            <label>Price Range</label>
+                            <div class="price-range">
+                                <span id="priceValue">$0 - $250,000</span>
+                                <input type="range" min="0" max="250000" value="250000" class="range-slider" oninput="updatePrice(this.value)">
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Brand</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox"> BMW</label>
+                                <label><input type="checkbox"> Porsche</label>
+                                <label><input type="checkbox"> Tesla</label>
+                                <label><input type="checkbox"> Ducati</label>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-outline btn-full">Clear Filters</button>
+                    </div>
+                </aside>
+
+                <div class="vehicles-grid" id="vehiclesGrid">
+                    <div class="vehicle-card" data-type="car" onclick="showVehicleDetail(1)">
+                        <div class="vehicle-image">
+                            <img src="https://images.unsplash.com/photo-1656861593680-0363ba5c27bc?q=80&w=800" alt="BMW M4">
+                            <div class="vehicle-year">2024</div>
+                        </div>
+                        <div class="vehicle-info">
+                            <div class="vehicle-header">
+                                <div>
+                                    <h4>BMW M4 Competition</h4>
+                                    <p class="vehicle-brand">BMW</p>
+                                </div>
+                                <div class="vehicle-price">$85,000</div>
+                            </div>
+                            <div class="vehicle-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Mileage</span>
+                                    <span class="spec-value">12,000 km</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Fuel Type</span>
+                                    <span class="spec-value">Petrol</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Transmission</span>
+                                    <span class="spec-value">Automatic</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Body Type</span>
+                                    <span class="spec-value">Coupe</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-gradient btn-full">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="vehicle-card" data-type="bike">
+                        <div class="vehicle-image">
+                            <img src="https://images.unsplash.com/photo-1586796953910-4df81db83021?q=80&w=800" alt="Ducati">
+                            <div class="vehicle-year">2024</div>
+                        </div>
+                        <div class="vehicle-info">
+                            <div class="vehicle-header">
+                                <div>
+                                    <h4>Ducati Panigale V4</h4>
+                                    <p class="vehicle-brand">Ducati</p>
+                                </div>
+                                <div class="vehicle-price">$28,000</div>
+                            </div>
+                            <div class="vehicle-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Mileage</span>
+                                    <span class="spec-value">3,500 km</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Fuel Type</span>
+                                    <span class="spec-value">Petrol</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Transmission</span>
+                                    <span class="spec-value">Manual</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Body Type</span>
+                                    <span class="spec-value">Sport</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-gradient btn-full">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="vehicle-card" data-type="ev">
+                        <div class="vehicle-image">
+                            <img src="https://images.unsplash.com/photo-1760539120788-8529cccfea75?q=80&w=800" alt="Tesla">
+                            <div class="vehicle-year">2024</div>
+                        </div>
+                        <div class="vehicle-info">
+                            <div class="vehicle-header">
+                                <div>
+                                    <h4>Tesla Model S Plaid</h4>
+                                    <p class="vehicle-brand">Tesla</p>
+                                </div>
+                                <div class="vehicle-price">$95,000</div>
+                            </div>
+                            <div class="vehicle-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Mileage</span>
+                                    <span class="spec-value">8,000 km</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Fuel Type</span>
+                                    <span class="spec-value">Electric</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Transmission</span>
+                                    <span class="spec-value">Automatic</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Body Type</span>
+                                    <span class="spec-value">Sedan</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-gradient btn-full">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="vehicle-card" data-type="car">
+                        <div class="vehicle-image">
+                            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800" alt="Porsche">
+                            <div class="vehicle-year">2023</div>
+                        </div>
+                        <div class="vehicle-info">
+                            <div class="vehicle-header">
+                                <div>
+                                    <h4>Porsche 911 Turbo S</h4>
+                                    <p class="vehicle-brand">Porsche</p>
+                                </div>
+                                <div class="vehicle-price">$210,000</div>
+                            </div>
+                            <div class="vehicle-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Mileage</span>
+                                    <span class="spec-value">15,000 km</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Fuel Type</span>
+                                    <span class="spec-value">Petrol</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Transmission</span>
+                                    <span class="spec-value">PDK</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Body Type</span>
+                                    <span class="spec-value">Coupe</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-gradient btn-full">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="vehicle-card" data-type="bike">
+                        <div class="vehicle-image">
+                            <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=800" alt="Kawasaki">
+                            <div class="vehicle-year">2023</div>
+                        </div>
+                        <div class="vehicle-info">
+                            <div class="vehicle-header">
+                                <div>
+                                    <h4>Kawasaki Ninja H2</h4>
+                                    <p class="vehicle-brand">Kawasaki</p>
+                                </div>
+                                <div class="vehicle-price">$32,000</div>
+                            </div>
+                            <div class="vehicle-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Mileage</span>
+                                    <span class="spec-value">5,000 km</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Fuel Type</span>
+                                    <span class="spec-value">Petrol</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Transmission</span>
+                                    <span class="spec-value">Manual</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Body Type</span>
+                                    <span class="spec-value">Sport</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-gradient btn-full">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="vehicle-card" data-type="ev">
+                        <div class="vehicle-image">
+                            <img src="https://images.unsplash.com/photo-1610768764270-790fbec18178?q=80&w=800" alt="Audi">
+                            <div class="vehicle-year">2024</div>
+                        </div>
+                        <div class="vehicle-info">
+                            <div class="vehicle-header">
+                                <div>
+                                    <h4>Audi e-tron GT</h4>
+                                    <p class="vehicle-brand">Audi</p>
+                                </div>
+                                <div class="vehicle-price">$105,000</div>
+                            </div>
+                            <div class="vehicle-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Mileage</span>
+                                    <span class="spec-value">6,000 km</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Fuel Type</span>
+                                    <span class="spec-value">Electric</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Transmission</span>
+                                    <span class="spec-value">Automatic</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Body Type</span>
+                                    <span class="spec-value">Sedan</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-gradient btn-full">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="services-hero">
+            <div class="container">
+                <div class="section-header">
+                    <div class="hero-badge">
+                        <i class="fas fa-star"></i>
+                        <span>Premium Service & Care</span>
+                    </div>
+                    <h1>Complete Vehicle Servicing</h1>
+                    <p>State-of-the-art facilities and expert technicians</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-content">
+            <div class="container">
+                <div class="services-premium-grid">
+                    <div class="service-premium-card">
+                        <div class="service-icon-large blue">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <h3>Routine Maintenance</h3>
+                        <p>Comprehensive vehicle check-up and diagnostics</p>
+                        <div class="service-price">
+                            <span>Price Range</span>
+                            <div class="price-value blue">$150 - $500</div>
+                        </div>
+                        <div class="service-features">
+                            <div class="feature-item"><i class="fas fa-check"></i> Oil & Filter Change</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> Brake Inspection</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> Tire Rotation</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> Battery Check</div>
+                        </div>
+                        <button class="btn btn-blue btn-full">Book Service <i class="fas fa-arrow-right"></i></button>
+                    </div>
+
+                    <div class="service-premium-card">
+                        <div class="service-icon-large orange">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Accidental Repair</h3>
+                        <p>Expert collision repair and restoration</p>
+                        <div class="service-price">
+                            <span>Price Range</span>
+                            <div class="price-value orange">$1,000 - $10,000</div>
+                        </div>
+                        <div class="service-features">
+                            <div class="feature-item"><i class="fas fa-check"></i> Frame Straightening</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> Panel Replacement</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> Glass Repair</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> Warranty Included</div>
+                        </div>
+                        <button class="btn btn-orange btn-full">Book Service <i class="fas fa-arrow-right"></i></button>
+                    </div>
+
+                    <div class="service-premium-card">
+                        <div class="service-icon-large blue">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Denting & Painting</h3>
+                        <p>Professional dent removal and precision painting</p>
+                        <div class="service-price">
+                            <span>Price Range</span>
+                            <div class="price-value blue">$300 - $3,000</div>
+                        </div>
+                        <div class="service-features">
+                            <div class="feature-item"><i class="fas fa-check"></i> Paintless Dent Repair</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> Color Matching</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> Clear Coat</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> Premium Finish</div>
+                        </div>
+                        <button class="btn btn-blue btn-full">Book Service <i class="fas fa-arrow-right"></i></button>
+                    </div>
+
+                    <div class="service-premium-card">
+                        <div class="service-icon-large orange">
+                            <i class="fas fa-droplet"></i>
+                        </div>
+                        <h3>Washing & Detailing</h3>
+                        <p>Premium wash and professional detailing</p>
+                        <div class="service-price">
+                            <span>Price Range</span>
+                            <div class="price-value orange">$50 - $300</div>
+                        </div>
+                        <div class="service-features">
+                            <div class="feature-item"><i class="fas fa-check"></i> Hand Wash</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> Wax & Polish</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> Wheel Cleaning</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> Tire Shine</div>
+                        </div>
+                        <button class="btn btn-orange btn-full">Book Service <i class="fas fa-arrow-right"></i></button>
+                    </div>
+
+                    <div class="service-premium-card">
+                        <div class="service-icon-large blue">
+                            <i class="fas fa-sparkles"></i>
+                        </div>
+                        <h3>Polishing & Restoring</h3>
+                        <p>Paint correction and ceramic coating</p>
+                        <div class="service-price">
+                            <span>Price Range</span>
+                            <div class="price-value blue">$400 - $2,000</div>
+                        </div>
+                        <div class="service-features">
+                            <div class="feature-item"><i class="fas fa-check"></i> Paint Correction</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> Ceramic Coating</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> Scratch Removal</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> UV Protection</div>
+                        </div>
+                        <button class="btn btn-blue btn-full">Book Service <i class="fas fa-arrow-right"></i></button>
+                    </div>
+
+                    <div class="service-premium-card">
+                        <div class="service-icon-large orange">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Full Interior Cleaning</h3>
+                        <p>Deep detailing - Dealer Special</p>
+                        <div class="service-price">
+                            <span>Price Range</span>
+                            <div class="price-value orange">$200 - $800</div>
+                        </div>
+                        <div class="service-features">
+                            <div class="feature-item"><i class="fas fa-check"></i> Steam Cleaning</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> Leather Conditioning</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> Odor Removal</div>
+                            <div class="feature-item"><i class="fas fa-check"></i> UV Sanitization</div>
+                        </div>
+                        <button class="btn btn-orange btn-full">Book Service <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-banner">
+            <div class="cta-bg"></div>
+            <div class="container">
+                <h2>Ready to Book Your Service?</h2>
+                <p>Get your vehicle serviced by expert technicians</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-white" onclick="alert('Booking system demo')">Book Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compare Section -->
+    <section id="compare" class="section">
+        <div class="container">
+            <div class="page-header">
+                <h1>Compare Vehicles</h1>
+                <p class="page-subtitle">Select up to 3 vehicles side by side</p>
+            </div>
+
+            <div class="compare-selectors">
+                <div class="compare-selector-card">
+                    <h4>Vehicle 1</h4>
+                    <select class="compare-select">
+                        <option>Select a vehicle</option>
+                        <option>BMW M4 - $85,000</option>
+                        <option>Porsche 911 - $210,000</option>
+                        <option>Tesla Model S - $95,000</option>
+                    </select>
+                </div>
+                <div class="compare-selector-card">
+                    <h4>Vehicle 2</h4>
+                    <select class="compare-select">
+                        <option>Select a vehicle</option>
+                        <option>BMW M4 - $85,000</option>
+                        <option>Porsche 911 - $210,000</option>
+                        <option>Tesla Model S - $95,000</option>
+                    </select>
+                </div>
+                <div class="compare-selector-card">
+                    <h4>Vehicle 3</h4>
+                    <select class="compare-select">
+                        <option>Select a vehicle</option>
+                        <option>BMW M4 - $85,000</option>
+                        <option>Porsche 911 - $210,000</option>
+                        <option>Tesla Model S - $95,000</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="compare-table-card">
+                <h3>Detailed Comparison</h3>
+                <div class="table-responsive">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>BMW M4</th>
+                                <th>Porsche 911</th>
+                                <th>Tesla Model S</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlight">
+                                <td><strong>Price</strong></td>
+                                <td class="price-cell">$85,000</td>
+                                <td class="price-cell">$210,000</td>
+                                <td class="price-cell">$95,000</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Year</strong></td>
+                                <td>2024</td>
+                                <td>2023</td>
+                                <td>2024</td>
+                            </tr>
+                            <tr class="highlight">
+                                <td><strong>Power</strong></td>
+                                <td>503 HP</td>
+                                <td>640 HP</td>
+                                <td>1020 HP</td>
+                            </tr>
+                            <tr>
+                                <td><strong>0-100 km/h</strong></td>
+                                <td>3.9s</td>
+                                <td>2.7s</td>
+                                <td>2.1s</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sell Section -->
+    <section id="sell" class="section">
+        <div class="container sell-container">
+            <div class="page-header">
+                <h1>Sell Your Vehicle</h1>
+                <p class="page-subtitle">Get the best price with our dealer network</p>
+            </div>
+
+            <div class="sell-form-card">
+                <h3>Vehicle Details</h3>
+                <form class="sell-form" onsubmit="handleSellSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Vehicle Type</label>
+                            <select class="form-input" required>
+                                <option value="">Select type</option>
+                                <option>Car</option>
+                                <option>Bike</option>
+                                <option>Electric</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Brand</label>
+                            <input type="text" class="form-input" placeholder="e.g. BMW" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Model</label>
+                            <input type="text" class="form-input" placeholder="e.g. M4" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Year</label>
+                            <input type="number" class="form-input" placeholder="2024" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Mileage (km)</label>
+                            <input type="text" class="form-input" placeholder="12000" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Expected Price ($)</label>
+                            <input type="number" class="form-input" placeholder="85000" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-input" rows="4" placeholder="Describe your vehicle..." required></textarea>
+                    </div>
+
+                    <h3 class="form-section-title">Contact Information</h3>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" class="form-input" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-input" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" class="form-input" placeholder="+1 (555) 000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Location</label>
+                            <input type="text" class="form-input" placeholder="City, State" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-gradient btn-full btn-lg">
+                        Submit Listing <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <a href="javascript:void(0)" class="logo" onclick="showSection('home')">
+                        <div class="logo-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="logo-text">
+                            <div class="logo-name">
+                                <span class="logo-auto">AUTO</span><span class="logo-pulse">PULSE</span>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="footer-desc">Premium car & bike dealers with complete vehicle servicing.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="javascript:void(0)" onclick="showSection('inventory')">Browse Inventory</a></li>
+                        <li><a href="javascript:void(0)" onclick="showSection('services')">Our Services</a></li>
+                        <li><a href="javascript:void(0)" onclick="showSection('sell')">Sell Vehicle</a></li>
+                        <li><a href="javascript:void(0)" onclick="showSection('compare')">Compare</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="javascript:void(0)" onclick="showSection('services')">Maintenance</a></li>
+                        <li><a href="javascript:void(0)" onclick="showSection('services')">Repair</a></li>
+                        <li><a href="javascript:void(0)" onclick="showSection('services')">Detailing</a></li>
+                        <li><a href="javascript:void(0)" onclick="showSection('services')">Interior Cleaning</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Auto Street, New York</li>
+                        <li><i class="fas fa-phone"></i> +1-555-0100</li>
+                        <li><i class="fas fa-envelope"></i> info@autopulse.com</li>
+                    </ul>
+                    <button class="btn btn-gradient btn-full">Become a Dealer</button>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 AutoPulse. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
